@@ -2,8 +2,8 @@
 // things like DVDs, books, vinyls
 
 class Media {
-	constructor() {
-		this.name = "Default generic media";
+	constructor(someNewName) {
+		this.name = someNewName;
 
 		Media.count++;
 	}
@@ -24,16 +24,23 @@ class Media {
 	}
 }
 
-// Instance of the blueprint
-let someMedia = new Media();
-someMedia.name = "Cool generic media";
-console.log(someMedia.name);
-console.log(someMedia.version());
+// // Instance of the blueprint
+// let someMedia = new Media();
+// someMedia.name = "Cool generic media";
+// console.log(someMedia.name);
+// console.log(someMedia.version());
 
-console.log(Media.version());
-console.log(Media.prototype.version());
+// console.log(Media.version());
+// console.log(Media.prototype.version());
 
-let someOtherMedia = new Media();
-console.log(someOtherMedia.name);
+// let someOtherMedia = new Media();
+// console.log(someOtherMedia.name);
 
-console.log(`We have ${Media.count} media objects`);
+// console.log(`We have ${Media.count} media objects`);
+
+let someVariable = 0;
+
+module.exports = {
+	someVariable,
+	Media,
+};
